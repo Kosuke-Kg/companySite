@@ -1,0 +1,6 @@
+/designData/
+node_modules
+.idea
+.DS_Store
+src/img*
+assets/img*
