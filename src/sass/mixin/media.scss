@@ -1,0 +1,10 @@
+$breakPoint: (
+  pad: "screen and (max-width: 1028px)",
+  sp: "screen and (max-width: 768px)",
+);
+
+@mixin mediaQuery($bp) {
+  @media #{map-get($breakPoint,$bp)} {
+    @content;
+  }
+}

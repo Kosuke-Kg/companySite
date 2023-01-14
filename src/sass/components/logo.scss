@@ -1,0 +1,5 @@
+@use "../mixin/width";
+
+#logo {
+  width: width.$logoWidth;
+}

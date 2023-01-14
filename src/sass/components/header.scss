@@ -1,0 +1,101 @@
+@use "../mixin/colors";
+@use "../mixin/fonts";
+@use "../mixin/media";
+
+#headerArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 35px clamp(1.25rem, 1.0378rem + 0.9302vw, 1.875rem);
+  width: 100vw;
+  top: 0;
+  left: 0;
+  transition: 0.7s;
+  z-index: 1000;
+
+  &.scroll {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    background-color: colors.$main;
+  }
+}
+
+#menuBtn {
+  display: none;
+
+  @include media.mediaQuery(sp) {
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    z-index: 1000;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: colors.$pureWite;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: 0.3s;
+    }
+    &::before {
+      transform: translateY(calc(-50% - 5px));
+    }
+    &::after {
+      transform: translateY(calc(-50% + 5px));
+    }
+
+    &.act {
+      span {
+        opacity: 0;
+      }
+      &::before {
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &::after {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+}
+
+#headerNavArea {
+  @include media.mediaQuery(sp) {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: transparent linear-gradient(155deg, #642390 0%, #19074a 100%) 0%
+      0% no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s;
+    visibility: hidden;
+  }
+  &.act {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navList {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-family: fonts.$Mont;
+    color: colors.$white;
+    font-weight: 700;
+
+    @include media.mediaQuery(sp) {
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+}

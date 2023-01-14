@@ -21,7 +21,9 @@
     <meta name="twitter:card" content="summary_large_image or summary" />
     <meta name="twitter:description" content="ページの説明" />
     <meta name="twitter:image:src" content="URL" />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.min.css" />
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/index.min.js" defer></script>
     <?php wp_head(); ?>

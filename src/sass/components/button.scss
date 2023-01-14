@@ -1,0 +1,61 @@
+@use "../mixin/colors";
+
+.buttonMain {
+  display: block;
+  position: relative;
+  padding: 20px 0;
+  border-radius: 50px;
+  width: 200px;
+  background: transparent linear-gradient(90deg, #7633a4 0%, #250d65 100%) 0% 0%
+    no-repeat padding-box;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: colors.$pureWite;
+  text-align: center;
+
+  span {
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent linear-gradient(90deg, #250d65 0%, #7633a4 100%) 0%
+      0% no-repeat padding-box;
+    transition: 0.5s;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid colors.$pureWite;
+    border-right: 0;
+    width: 0;
+    height: 0;
+    top: 50%;
+    right: 1.5em;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      right: 1.3em;
+    }
+  }
+}

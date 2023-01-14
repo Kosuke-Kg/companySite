@@ -1,0 +1,51 @@
+@use "../mixin/colors";
+@use "../mixin/media";
+
+#contactArea {
+  padding: clamp(3.75rem, 3.3256rem + 1.8605vw, 5rem) 0;
+  background-color: colors.$footerGray;
+
+  .titleMain {
+    margin: 0 0 clamp(1.875rem, 1.7689rem + 0.4651vw, 2.1875rem);
+  }
+
+  .description {
+    margin: 0 0 30px;
+    font-size: clamp(0.875rem, 0.8538rem + 0.093vw, 0.9375rem);
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .buttonMain {
+    margin: 0 auto;
+  }
+}
+
+#footerArea {
+  padding: 60px 0;
+  background-color: colors.$footerBlack;
+
+  .navArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 0 20px;
+    padding: 0 10%;
+    font-size: clamp(0.75rem, 0.7076rem + 0.186vw, 0.875rem);
+    font-weight: 700;
+    color: colors.$pureWite;
+
+    @include media.mediaQuery(sp) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+}
+
+#copyright {
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: colors.$purple;
+  text-align: center;
+}

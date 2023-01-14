@@ -1,1 +1,11 @@
-@import "layouts/reset";
+@import "./layouts/reset";
+@import "./layouts/common";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/logo";
+@import "./components/titles";
+@import "./components/button";
+
+main {
+  height: 1800px;
+}

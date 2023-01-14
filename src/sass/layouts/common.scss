@@ -1,0 +1,23 @@
+@use "../mixin/colors";
+@use "../mixin/media";
+
+body {
+  color: colors.$text;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  position: relative;
+}
+.pc {
+  display: block;
+
+  @include media.mediaQuery(sp) {
+    display: none;
+  }
+}
+.sp {
+  display: none;
+
+  @include media.mediaQuery(sp) {
+    display: block;
+  }
+}

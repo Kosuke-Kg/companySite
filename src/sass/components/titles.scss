@@ -1,0 +1,21 @@
+@use "../mixin/colors";
+@use "../mixin/fonts";
+
+.titleMain {
+  color: colors.$secondary;
+
+  h2 {
+    margin: 0 0 5px;
+    font-family: fonts.$Mont;
+    font-size: clamp(1.875rem, 1.7901rem + 0.3721vw, 2.125rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-align: center;
+  }
+  span {
+    display: block;
+    font-size: clamp(0.8125rem, 0.7913rem + 0.093vw, 0.875rem);
+    text-align: center;
+  }
+}
