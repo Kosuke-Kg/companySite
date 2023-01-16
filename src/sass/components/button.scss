@@ -1,4 +1,5 @@
 @use "../mixin/colors";
+@use "../mixin/fonts";
 
 .buttonMain {
   display: block;
@@ -8,6 +9,7 @@
   width: 200px;
   background: transparent linear-gradient(90deg, #7633a4 0%, #250d65 100%) 0% 0%
     no-repeat padding-box;
+  font-family: fonts.$Mont;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -54,6 +56,44 @@
     &::before {
       opacity: 0;
     }
+    &::after {
+      right: 1.3em;
+    }
+  }
+}
+
+.buttonSecondary {
+  display: block;
+  position: relative;
+  padding: 20px 0;
+  border: 1px solid colors.$pureWite;
+  border-radius: 50px;
+  width: 220px;
+  font-family: fonts.$Mont;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: colors.$pureWite;
+  text-align: center;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid colors.$pureWite;
+    border-right: 0;
+    width: 0;
+    height: 0;
+    top: 50%;
+    right: 1.5em;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+
+  &:hover {
     &::after {
       right: 1.3em;
     }

@@ -1,5 +1,6 @@
 @use "../mixin/colors";
 @use "../mixin/media";
+@use "../mixin//fonts";
 
 #contactArea {
   padding: clamp(3.75rem, 3.3256rem + 1.8605vw, 5rem) 0;
@@ -44,6 +45,7 @@
 }
 
 #copyright {
+  font-family: fonts.$Mont;
   font-size: 10px;
   letter-spacing: 0.05em;
   color: colors.$purple;
