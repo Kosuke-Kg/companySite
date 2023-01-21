@@ -1,0 +1,152 @@
+@use "../mixin/fonts";
+@use "../mixin/media";
+@use "../mixin/colors";
+
+#company {
+  #sec01 {
+    .goal {
+      padding: 100px 0 0;
+      background-image: url("../img/company/bg-circle.png");
+      background-position: center 0;
+      background-size: 67% auto;
+
+      &:before,
+      &::after {
+        background-position: 0 5%;
+      }
+
+      .titleMain {
+        margin-bottom: 30px;
+
+        h2 {
+          font-family: fonts.$ja;
+        }
+      }
+
+      .description {
+        margin-bottom: 160px;
+
+        @include media.mediaQuery(sp) {
+          margin-bottom: 60px;
+        }
+      }
+    }
+
+    .ceo {
+      display: flex;
+      align-items: flex-start;
+      gap: 4.5%;
+      margin: 0 auto;
+      padding: 0 5%;
+      max-width: 1100px;
+
+      @include media.mediaQuery(sp) {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      picture {
+        width: 45%;
+
+        @include media.mediaQuery(sp) {
+          width: 100%;
+        }
+      }
+
+      p {
+        width: 54%;
+        font-size: clamp(0.875rem, 0.8538rem + 0.093vw, 0.9375rem);
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        line-height: 1.66;
+        text-align: left;
+
+        @include media.mediaQuery(sp) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #sec02 {
+    padding: 140px 0 110px;
+    @include media.mediaQuery(sp) {
+      padding: 80px 0 50px;
+    }
+
+    .contentIn {
+      margin: 0 auto;
+      padding: 0 5%;
+      max-width: 1100px;
+    }
+
+    .titleMain {
+      margin: 0 auto 60px;
+    }
+
+    .dataBox {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 18.2% 81.8%);
+      margin: 0 0 65px;
+
+      @include media.mediaQuery(sp) {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 0 20px;
+      }
+
+      dt,
+      dd {
+        margin: 0 0 35px;
+        padding: 0 0 35px;
+        border-bottom: 1px solid colors.$borderGray;
+        font-size: clamp(1rem, 1.0212rem + -0.093vw, 0.9375rem);
+        font-weight: 400;
+        letter-spacing: 0.05em;
+      }
+
+      dt {
+        padding-left: 15%;
+        font-weight: 600;
+
+        @include media.mediaQuery(sp) {
+          border: none;
+          margin: 0 0 10px;
+          padding: 0;
+        }
+      }
+
+      dd {
+        font-family: fonts.$Mont;
+
+        @include media.mediaQuery(sp) {
+          margin: 0 0 20px;
+          padding: 0 0 20px;
+        }
+      }
+    }
+
+    .map {
+      position: relative;
+      margin: 0 0 10px;
+      padding-top: 35.4954%;
+
+      @include media.mediaQuery(sp) {
+        padding-top: 71.6417%;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .link {
+      font-size: clamp(0.875rem, 0.8326rem + 0.186vw, 1rem);
+      letter-spacing: 0.05em;
+      color: colors.$link;
+    }
+  }
+}

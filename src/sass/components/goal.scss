@@ -1,0 +1,124 @@
+@use "../mixin/media";
+@use "../mixin/colors";
+
+.goal {
+  position: relative;
+  margin: 0 auto;
+  padding: 136px 0 80px;
+  max-width: 1300px;
+  background-image: url("../img/top/bg-circle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+
+  @include media.mediaQuery(sp) {
+    padding: 42px 0 80px;
+    background-image: url("../img/top/bg-circleSP.png");
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+
+    @include media.mediaQuery(pad) {
+      display: none;
+    }
+  }
+
+  &::before {
+    width: 23.5%;
+    background-image: url("../img/top/sce05L.png");
+    left: 0;
+  }
+
+  &::after {
+    width: 25%;
+    background-image: url("../img/top/sec05R.png");
+    right: 0;
+  }
+
+  .titleMain {
+    margin: 0 auto 40px;
+
+    @include media.mediaQuery(sp) {
+      margin: 0 auto 30px;
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 45px;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1;
+
+    @include media.mediaQuery(sp) {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 12px;
+      width: 103%;
+      background-color: colors.$yellow;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+
+      @include media.mediaQuery(sp) {
+        display: none;
+      }
+    }
+
+    span {
+      @include media.mediaQuery(sp) {
+        display: inline-block;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 8px;
+          width: 103%;
+          background-color: colors.$yellow;
+          bottom: 4px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  .description {
+    margin: 0 auto 30px;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+
+    @include media.mediaQuery(sp) {
+      font-size: 14px;
+    }
+  }
+
+  .buttonMain {
+    margin: 0 auto;
+  }
+}

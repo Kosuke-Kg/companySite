@@ -1,0 +1,19 @@
+@use "../mixin/colors";
+@use "../mixin/fonts";
+
+#breadcrumb {
+  background-color: colors.$footerGray;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: clamp(0.375rem, 0.184rem + 0.8372vw, 0.9375rem) 5%;
+    max-width: 1110px;
+    font-family: fonts.$Mont;
+    font-size: clamp(0.6875rem, 0.6663rem + 0.093vw, 0.75rem);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+}
