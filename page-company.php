@@ -35,7 +35,7 @@ Template Name: Company
           />
           <img
             src="<?php echo get_template_directory_uri();?>/assets/img/company/CEO.jpg"
-            alt="サービスイメージweb制作"
+            alt="CEO写真"
           />
         </picture>
         <p>

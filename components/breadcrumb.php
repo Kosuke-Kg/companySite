@@ -6,7 +6,7 @@
       <li>
         <a href="<?php echo home_url() ?>">HOME ></a>
       </li>
-      <li><?php the_title()?></li>
+      <li><?php echo strtoupper(get_post_field( 'post_name', get_the_ID() ))?></li>
     <?php
       endif
     ?>

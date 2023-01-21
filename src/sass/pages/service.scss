@@ -1,0 +1,73 @@
+@use "../mixin/fonts";
+@use "../mixin/media";
+
+#service {
+  #sec01 {
+    padding: 70px 0 110px;
+
+    @include media.mediaQuery(sp) {
+      padding: 40px 0 80px;
+    }
+
+    .contentIn {
+      margin: 0 auto;
+      padding: 0 5%;
+      max-width: 1100px;
+    }
+
+    .serviceList {
+      display: grid;
+      gap: 60px;
+
+      @include media.mediaQuery(sp) {
+        gap: 50px;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+
+        @include media.mediaQuery(sp) {
+          flex-direction: column;
+        }
+
+        picture {
+          width: 40%;
+
+          @include media.mediaQuery(sp) {
+            margin: 0 0 20px;
+            width: 100%;
+          }
+        }
+
+        .rBox {
+          width: 56%;
+
+          @include media.mediaQuery(sp) {
+            width: 100%;
+          }
+
+          h2 {
+            margin: 0 0 20px;
+            font-family: fonts.$Mont;
+            font-weight: 700;
+            font-size: clamp(1.125rem, 0.9977rem + 0.5581vw, 1.5rem);
+            letter-spacing: 0.05em;
+            line-height: 1;
+
+            @include media.mediaQuery(sp) {
+              margin: 0 0 15px;
+            }
+          }
+
+          p {
+            font-size: clamp(0.875rem, 0.8538rem + 0.093vw, 0.9375rem);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+}

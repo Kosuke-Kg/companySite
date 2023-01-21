@@ -1059,6 +1059,56 @@ img {
   color: #240c6a;
 }
 
+#service #sec01 {
+  padding: 70px 0 110px;
+}
+
+#service #sec01 .contentIn {
+  margin: 0 auto;
+  padding: 0 5%;
+  max-width: 1100px;
+}
+
+#service #sec01 .serviceList {
+  display: grid;
+  gap: 60px;
+}
+
+#service #sec01 .serviceList li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#service #sec01 .serviceList li picture {
+  width: 40%;
+}
+
+#service #sec01 .serviceList li .rBox {
+  width: 56%;
+}
+
+#service #sec01 .serviceList li .rBox h2 {
+  margin: 0 0 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.125rem, 0.9977rem + 0.5581vw, 1.5rem);
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+#service #sec01 .serviceList li .rBox p {
+  font-size: clamp(0.875rem, 0.8538rem + 0.093vw, 0.9375rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
 @media screen and (max-width: 1028px) {
   .goal::before,
   .goal::after {
@@ -1372,5 +1422,34 @@ img {
 
   #company #sec02 .map {
     padding-top: 71.6417%;
+  }
+
+  #service #sec01 {
+    padding: 40px 0 80px;
+  }
+
+  #service #sec01 .serviceList {
+    gap: 50px;
+  }
+
+  #service #sec01 .serviceList li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  #service #sec01 .serviceList li picture {
+    margin: 0 0 20px;
+    width: 100%;
+  }
+
+  #service #sec01 .serviceList li .rBox {
+    width: 100%;
+  }
+
+  #service #sec01 .serviceList li .rBox h2 {
+    margin: 0 0 15px;
   }
 }
