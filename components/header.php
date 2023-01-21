@@ -1,7 +1,7 @@
 <body>
   <header id="headerArea">
     <div id="logo">
-      <a href="<?php get_home_url();?>">
+      <a href="<?php echo home_url();?>">
         <picture>
           <source
             srcset="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.webp"

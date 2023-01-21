@@ -1,5 +1,41 @@
 @use "../mixin/colors";
 @use "../mixin/fonts";
+@use "../mixin/media";
+
+#titleUnderPage {
+  padding: 105px 0 65px;
+  background-image: url("../img/common/titleUnderPagePC.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  line-height: 1;
+  color: colors.$pureWite;
+  font-family: fonts.$Mont;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+
+  @include media.mediaQuery(sp) {
+    padding: 95px 0 40px;
+    background-image: url("../img/common/titleUnderPageSP.jpg");
+  }
+
+  h1 {
+    margin: 0 0 15px;
+    font-size: 36px;
+
+    @include media.mediaQuery(sp) {
+      font-size: 30px;
+    }
+  }
+  p {
+    font-size: 14px;
+
+    @include media.mediaQuery(sp) {
+      font-size: 13px;
+    }
+  }
+}
 
 .titleMain {
   color: colors.$secondary;

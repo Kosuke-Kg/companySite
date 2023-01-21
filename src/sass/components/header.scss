@@ -14,6 +14,10 @@
   transition: 0.7s;
   z-index: 1000;
 
+  @include media.mediaQuery(sp) {
+    padding: 20px clamp(1.25rem, 1.0378rem + 0.9302vw, 1.875rem);
+  }
+
   &.scroll {
     padding-top: 21px;
     padding-bottom: 21px;

@@ -164,7 +164,7 @@
     </div>
   </section>
   <section id="sec05">
-    <div class="contentIn">
+    <div class="contentIn goal" >
       <div class="titleMain">
         <h2>COMPANY</h2>
         <span>私たちについて</span>
