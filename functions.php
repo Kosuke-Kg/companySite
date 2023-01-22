@@ -36,7 +36,7 @@ function create_post_type() {
   );
 
   register_post_type( 'work',  // カスタム投稿ID
-  array(
+    array(
     'label' => '制作実績',
     'public' => true,
     'has_archive' => true,
@@ -48,6 +48,19 @@ function create_post_type() {
     )
   )
 );
+
+  register_post_type( 'recruit',  // カスタム投稿ID
+    array(
+      'label' => '求人',
+      'public' => true,
+      'has_archive' => true,
+      'menu_position' => 6,
+      'supports' => array(
+        'title',  // 記事タイトル
+        'revisions',  // リビジョン
+      )
+    )
+  );
 }
 add_action( 'init', 'create_post_type' );
 

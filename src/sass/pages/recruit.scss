@@ -1,0 +1,167 @@
+@use "../mixin/fonts";
+@use "../mixin/colors";
+@use "../mixin/media";
+
+#recruit {
+  background-image: url("../img/recruit/bg-geometry.png");
+  background-position: top;
+
+  #sec01 {
+    margin: 0 auto;
+    padding: clamp(2.5rem, 0.8872rem + 7.0698vw, 7.25rem) 0 0;
+    max-width: 1440px;
+
+    .subTitle {
+      margin: 0 0 clamp(1.5625rem, 1.2442rem + 1.3953vw, 2.5rem);
+      text-align: center;
+      color: colors.$secondary;
+
+      .title {
+        margin: 0 auto 15px;
+        font-size: clamp(3rem, 2.4907rem + 2.2326vw, 4.5rem);
+        font-family: fonts.$Mont;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        line-height: 1.2;
+      }
+
+      .sub {
+        font-size: clamp(1.125rem, 0.8279rem + 1.3023vw, 2rem);
+        font-weight: 300;
+        letter-spacing: 0.05;
+        line-height: 1;
+      }
+    }
+
+    .description {
+      margin: 0 0 40px;
+      font-size: clamp(0.9375rem, 0.9163rem + 0.093vw, 1rem);
+      font-weight: 300;
+      letter-spacing: 0.05;
+      line-height: 1.8;
+      text-align: center;
+    }
+  }
+
+  #sec02 {
+    padding: clamp(2.5rem, 1.8634rem + 2.7907vw, 4.375rem) 0 0;
+
+    .contentIn {
+      padding: 0 5%;
+      .titleMain {
+        margin: 0 0 clamp(1.875rem, 1.6628rem + 0.9302vw, 2.5rem);
+      }
+      .recruitList {
+        display: grid;
+        gap: 30px;
+        margin: 0 auto;
+        max-width: 1100px;
+
+        .recruitItem {
+          padding: clamp(1.875rem, 1.2384rem + 2.7907vw, 3.75rem) 0;
+          border: 1px solid colors.$borderMain;
+          border-radius: 10px;
+          background-color: colors.$pureWite;
+
+          .industry {
+            margin: 0 0 clamp(2.1875rem, 1.9116rem + 1.2093vw, 3rem);
+            font-family: fonts.$Mont;
+            font-size: clamp(1rem, 0.8302rem + 0.7442vw, 1.5rem);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            text-align: center;
+          }
+
+          .dataBox {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 20% 80%);
+            margin: 0 auto 50px;
+            gap: 32px 0;
+            width: 87%;
+            max-width: 920px;
+
+            @include media.mediaQuery(sp) {
+              grid-template-columns: repeat(1, 1fr);
+              gap: 0;
+              margin: 0 auto 40px;
+            }
+
+            dt,
+            dd {
+              padding: 0 0 30px;
+              border-bottom: 1px solid colors.$borderGray;
+              font-size: clamp(0.875rem, 0.8538rem + 0.093vw, 0.9375rem);
+              letter-spacing: 0.05em;
+              line-height: 1;
+            }
+
+            dt {
+              padding-left: 10%;
+              font-weight: 700;
+
+              @include media.mediaQuery(sp) {
+                margin: 0 0 10px;
+                padding: 0;
+                border: none;
+              }
+            }
+
+            dd {
+              padding-right: 10%;
+              font-family: fonts.$Mont;
+              font-weight: 500;
+              line-height: 1.8;
+
+              @include media.mediaQuery(sp) {
+                margin: 0 0 20px;
+                padding: 0 0 16px;
+              }
+            }
+          }
+
+          .buttonMain {
+            margin: 0 auto 5px;
+            font-family: fonts.$ja;
+          }
+
+          .transition {
+            font-family: fonts.$Mont;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  #sec03 {
+    padding: 140px 0 110px;
+
+    @include media.mediaQuery(sp) {
+      padding: 80px 0;
+    }
+
+    .contentIn {
+      padding: 0 5%;
+
+      .titleMain {
+        margin-bottom: clamp(1.875rem, 1.6628rem + 0.9302vw, 2.5rem);
+      }
+
+      .movie {
+        margin: 0 auto;
+        max-width: 1100px;
+
+        iframe {
+          aspect-ratio: 16/9;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
