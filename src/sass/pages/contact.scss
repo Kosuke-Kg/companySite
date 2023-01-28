@@ -1,0 +1,190 @@
+@use "../mixin/colors";
+@use "../mixin/fonts";
+@use "../mixin/media";
+
+#contact {
+  #sec01 {
+    padding: clamp(2.5rem, 1.8634rem + 2.7907vw, 4.375rem) 5%;
+    .descriptions {
+      margin: 0 auto clamp(1.875rem, 1.6628rem + 0.9302vw, 2.5rem);
+      font-size: clamp(0.875rem, 0.8326rem + 0.186vw, 1rem);
+      font-weight: 300;
+      line-height: 1.65;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+
+    .formArea {
+      padding: clamp(1.875rem, 0.6017rem + 5.5814vw, 5.625rem) 10%;
+      background-color: colors.$footerGray;
+
+      dt {
+        margin: 0 0 15px;
+        font-size: clamp(0.9375rem, 0.9163rem + 0.093vw, 1rem);
+        font-weight: 600;
+        letter-spacing: 0.05em;
+
+        span {
+          display: inline-block;
+          margin: 0 0 0 10px;
+          font-size: 12px;
+        }
+        .required {
+          color: colors.$secondary;
+        }
+
+        .caution {
+          font-weight: 300;
+        }
+      }
+
+      dd {
+        margin: 0 0 30px;
+
+        .mwform-radio-field-text {
+          font-size: clamp(0.8125rem, 0.7913rem + 0.093vw, 0.875rem);
+          font-weight: 300;
+          letter-spacing: 0.05em;
+          line-height: 1;
+        }
+
+        label {
+          display: inline-flex;
+          align-items: center;
+
+          @include media.mediaQuery(sp) {
+            display: flex;
+          }
+        }
+
+        input[type="radio"] {
+          all: revert;
+          position: relative;
+          border: 1px solid colors.$buttonBorder;
+          border-radius: 90px;
+          width: 18px;
+          height: 18px;
+          background-color: colors.$buttonColor;
+
+          &:checked {
+            ::before {
+              content: "";
+              display: block;
+              position: absolute;
+              border-radius: 90px;
+              background-color: colors.$text;
+              width: 98%;
+              height: 98%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+          padding: 1%;
+          border: 1px solid colors.$borderGrayA;
+          border-radius: 6px;
+          background-color: colors.$pureWite;
+          max-width: 300px;
+
+          @include media.mediaQuery(sp) {
+            padding: 2.5%;
+            max-width: 100%;
+          }
+        }
+
+        &.tel {
+          input[type="text"] {
+            max-width: 200px;
+
+            @include media.mediaQuery(sp) {
+              max-width: 100%;
+            }
+          }
+        }
+
+        textarea {
+          max-width: 600px;
+          height: 255px;
+          white-space: pre-wrap;
+        }
+
+        select {
+          width: 100%;
+        }
+      }
+
+      .btn {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        border-radius: 50px;
+        padding: 0px 0;
+        width: 200px;
+        background: transparent linear-gradient(90deg, #7633a4 0%, #250d65 100%)
+          0% 0% no-repeat padding-box;
+        font-family: fonts.$Mont;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        line-height: 1;
+        color: colors.$pureWite;
+        text-align: center;
+
+        input {
+          position: relative;
+          padding: 20px 0;
+          width: 100%;
+          z-index: 1;
+        }
+
+        &::before {
+          content: "送信する";
+          display: block;
+          position: absolute;
+          padding: 20px 0;
+          border-radius: 50px;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          background: transparent
+            linear-gradient(90deg, #250d65 0%, #7633a4 100%) 0% 0% no-repeat
+            padding-box;
+          transition: 0.5s;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          border-style: solid;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 10px solid colors.$pureWite;
+          border-right: 0;
+          width: 0;
+          height: 0;
+          top: 50%;
+          right: 1.5em;
+          transform: translateY(-50%);
+          transition: 0.3s;
+        }
+
+        &:hover {
+          &::before {
+            opacity: 0;
+          }
+          &::after {
+            right: 1.3em;
+          }
+        }
+      }
+    }
+  }
+}

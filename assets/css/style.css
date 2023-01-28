@@ -1285,6 +1285,186 @@ img {
   text-align: center;
 }
 
+#contact #sec01 {
+  padding: clamp(2.5rem, 1.8634rem + 2.7907vw, 4.375rem) 5%;
+}
+
+#contact #sec01 .descriptions {
+  margin: 0 auto clamp(1.875rem, 1.6628rem + 0.9302vw, 2.5rem);
+  font-size: clamp(0.875rem, 0.8326rem + 0.186vw, 1rem);
+  font-weight: 300;
+  line-height: 1.65;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+#contact #sec01 .formArea {
+  padding: clamp(1.875rem, 0.6017rem + 5.5814vw, 5.625rem) 10%;
+  background-color: #f7f7f7;
+}
+
+#contact #sec01 .formArea dt {
+  margin: 0 0 15px;
+  font-size: clamp(0.9375rem, 0.9163rem + 0.093vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+#contact #sec01 .formArea dt span {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-size: 12px;
+}
+
+#contact #sec01 .formArea dt .required {
+  color: #391e88;
+}
+
+#contact #sec01 .formArea dt .caution {
+  font-weight: 300;
+}
+
+#contact #sec01 .formArea dd {
+  margin: 0 0 30px;
+}
+
+#contact #sec01 .formArea dd .mwform-radio-field-text {
+  font-size: clamp(0.8125rem, 0.7913rem + 0.093vw, 0.875rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+#contact #sec01 .formArea dd label {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#contact #sec01 .formArea dd input[type=radio] {
+  all: revert;
+  position: relative;
+  border: 1px solid #aaa;
+  border-radius: 90px;
+  width: 18px;
+  height: 18px;
+  background-color: #fdfdfd;
+}
+
+#contact #sec01 .formArea dd input[type=radio]:checked ::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 90px;
+  background-color: #333333;
+  width: 98%;
+  height: 98%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#contact #sec01 .formArea dd input[type=text],
+#contact #sec01 .formArea dd input[type=email],
+#contact #sec01 .formArea dd textarea,
+#contact #sec01 .formArea dd select {
+  padding: 1%;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background-color: #fff;
+  max-width: 300px;
+}
+
+#contact #sec01 .formArea dd.tel input[type=text] {
+  max-width: 200px;
+}
+
+#contact #sec01 .formArea dd textarea {
+  max-width: 600px;
+  height: 255px;
+  white-space: pre-wrap;
+}
+
+#contact #sec01 .formArea dd select {
+  width: 100%;
+}
+
+#contact #sec01 .formArea .btn {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 50px;
+  padding: 0px 0;
+  width: 200px;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#7633a4), to(#250d65)) 0% 0% no-repeat padding-box;
+  background: transparent -webkit-linear-gradient(left, #7633a4 0%, #250d65 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #7633a4 0%, #250d65 100%) 0% 0% no-repeat padding-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+}
+
+#contact #sec01 .formArea .btn input {
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#contact #sec01 .formArea .btn::before {
+  content: "送信する";
+  display: block;
+  position: absolute;
+  padding: 20px 0;
+  border-radius: 50px;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#250d65), to(#7633a4)) 0% 0% no-repeat padding-box;
+  background: transparent -webkit-linear-gradient(left, #250d65 0%, #7633a4 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #250d65 0%, #7633a4 100%) 0% 0% no-repeat padding-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#contact #sec01 .formArea .btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #fff;
+  border-right: 0;
+  width: 0;
+  height: 0;
+  top: 50%;
+  right: 1.5em;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#contact #sec01 .formArea .btn:hover::before {
+  opacity: 0;
+}
+
+#contact #sec01 .formArea .btn:hover::after {
+  right: 1.3em;
+}
+
 @media screen and (max-width: 1028px) {
   .goal::before,
   .goal::after {
@@ -1661,5 +1841,24 @@ img {
   #work #sec01 .contentIn .workList {
     gap: 40px;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  #contact #sec01 .formArea dd label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  #contact #sec01 .formArea dd input[type=text],
+  #contact #sec01 .formArea dd input[type=email],
+  #contact #sec01 .formArea dd textarea,
+  #contact #sec01 .formArea dd select {
+    padding: 2.5%;
+    max-width: 100%;
+  }
+
+  #contact #sec01 .formArea dd.tel input[type=text] {
+    max-width: 100%;
   }
 }
