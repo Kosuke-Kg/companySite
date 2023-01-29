@@ -28,7 +28,7 @@
               <a href="<?php get_home_url();?>/company/">COMPANY</a>
             </li>
             <li>
-              <a href="<?php get_home_url();?>/recruit/">RECRUIT</a>
+              <a href="<?php get_home_url();?>/recruitpage/">RECRUIT</a>
             </li>
             <li>
               <a href="<?php get_home_url();?>/contact/">CONTACT</a>
