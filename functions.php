@@ -64,6 +64,12 @@ function create_post_type() {
 }
 add_action( 'init', 'create_post_type' );
 
+function custom_tiny_mce_formats( $settings ){
+  $settings[ 'block_formats' ] = '段落=p;見出し大=h3;見出小=h4;';
+  return $settings;
+}
+add_filter( 'tiny_mce_before_init', 'custom_tiny_mce_formats' );
+
 function remove_menus () {
   global $menu;
   remove_menu_page( 'edit.php' ); // 投稿を非表示

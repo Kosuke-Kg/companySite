@@ -1,0 +1,62 @@
+@use "../mixin/fonts";
+@use "../mixin/colors";
+@use "../mixin/media";
+
+#newsArchive {
+  #sec01 {
+    padding: clamp(2.5rem, 2.0756rem + 1.8605vw, 3.75rem) 5%
+      clamp(6.875rem, 7.5116rem + -2.7907vw, 5rem);
+
+    .contentIn {
+      margin: 0 auto;
+      max-width: 750px;
+
+      .newsBox {
+        display: grid;
+        gap: 15px;
+      }
+
+      .listItem {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include media.mediaQuery(sp) {
+          flex-wrap: wrap;
+          gap: 10px 15px;
+        }
+
+        .date {
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          line-height: 1;
+        }
+
+        .cat {
+          padding: 5px 0;
+          border-radius: 90px;
+          width: 82px;
+          background-color: colors.$gray;
+          font-family: fonts.$Mont;
+          font-size: clamp(0.6875rem, 0.6663rem + 0.093vw, 0.75rem);
+          font-weight: 700;
+          line-height: 1;
+          text-align: center;
+        }
+
+        .title {
+          font-size: clamp(0.875rem, 0.8538rem + 0.093vw, 0.9375rem);
+          font-weight: 300;
+          letter-spacing: 0.05em;
+          line-height: 1.7;
+          width: calc(100% - 255px);
+
+          @include media.mediaQuery(sp) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
